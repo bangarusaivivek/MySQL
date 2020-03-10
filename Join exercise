@@ -205,4 +205,4 @@
 		            SELECT movieid FROM 
                 casting JOIN actor on (actor.id = actorid)
                 WHERE name = 'Art Garfunkel'
-                ) AND name != 'Art Garfunkel'
+                ) AND name != 'Art Garfunkel' 
