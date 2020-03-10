@@ -7,3 +7,4 @@ select "There are a total of",count(occupation),
 concat(lower(occupation),'s.') from occupations
 Group By occupation
 Order By count(occupation),occupation;
+ 
