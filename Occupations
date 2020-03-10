@@ -1,0 +1,18 @@
+// https://www.hackerrank.com/challenges/occupations/problem
+
+Set @r1=0,@r2=0,@r3=0,@r4=0;
+select min(Doctor),min(Professor),min(Singer),min(Actor)
+from (
+    select 
+    case when occupation='Doctor' Then (@r1:=@r1+1)
+    case when occupation='Professor' Then (@r2:=@r2+1)
+    case when occupation='Singer' Then (@r3:=@r3+1)
+    case when occupation='Actor' Then (@r4:=@r4+1)
+    End as RowNumber,
+case when occupation='Doctor' Then Name End as Doctor,
+case when occupation='Professor' Then Name End as Professor,
+case when occupation='Singer' Then Name End as Singer,
+case when occupation='Actor' Then Name End as Actor
+from Occupations
+order by Name) as Temp
+Group By RowNumber;
