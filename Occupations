@@ -16,3 +16,4 @@ case when occupation='Actor' Then Name End as Actor
 from Occupations
 order by Name) as Temp
 Group By RowNumber; 
+ 
